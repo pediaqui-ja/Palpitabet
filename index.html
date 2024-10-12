@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PalpiteBet💰🏆⚽</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #3498db;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .game {
+            margin-bottom: 15px;
+        }
+
+        .pix-info {
+            display: none; /* Oculta inicialmente */
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+            width: 100%;
+            margin-top: 10px; /* Espaçamento entre botões */
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .secondary-button {
+            background-color: #2ecc71; /* Cor diferente para o botão secundário */
+        }
+
+        .secondary-button:hover {
+            background-color: #27ae60; /* Cor diferente para hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🏆⚽PalpiteBet🏆⚽</h1>
+        <p>💰 Faça seus palpites e Boa sorte!💰</p>
+        <p>💰 Acerte o palpite e ganhe R$500 💰</p>
+    </header>
+
+    <section>
+        <form id="palpite-form" onsubmit="enviarPalpites(event)">
+            <label for="client-name">Nome:</label>
+            <input type="text" id="client-name" name="client_name" required>
+
+            <label for="whatsapp">WhatsApp:</label>
+            <input type="tel" id="whatsapp" name="client_whatsapp" placeholder="seu contato" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="client_email" placeholder="seuemail@exemplo.com" required>
+
+            <div class="game">
+    <label for="palpite_1">1. São Paulo vs Vasco:</label>
+    <select name="palpite_1" id="palpite_1" required>
+        <option value="São Paulo (Casa)">São Paulo (Casa)</option>
+        <option value="Empate">Empate</option>
+        <option value="Vasco (Visitante)">Vasco (Visitante)</option>
+    </select>
+</div>
+
+<div class="game">
+    <label for="palpite_2">2. Fortaleza vs Atlético-MG:</label>
+    <select name="palpite_2" id="palpite_2" required>
+        <option value="Fortaleza (Casa)">Fortaleza (Casa)</option>
+        <option value="Empate">Empate</option>
+        <option value="Atlético-MG (Visitante)">Atlético-MG (Visitante)</option>
+    </select>
+</div>
+
+<div class="game">
+    <label for="palpite_3">3. Bahia vs Botafogo:</label>
+    <select name="palpite_3" id="palpite_3" required>
+        <option value="Bahia (Casa)">Bahia (Casa)</option>
+        <option value="Empate">Empate</option>
+        <option value="Botafogo (Visitante)">Botafogo (Visitante)</option>
+    </select>
+</div>
+
+<div class="game">
+    <label for="palpite_4">4. Internacional vs Corinthians:</label>
+    <select name="palpite_4" id="palpite_4" required>
+        <option value="Internacional (Casa)">Internacional (Casa)</option>
+        <option value="Empate">Empate</option>
+        <option value="Corinthians (Visitante)">Corinthians (Visitante)</option>
+    </select>
+</div>
+
+<div class="game">
+    <label for="palpite_5">5. Cuiabá vs Atlético-GO:</label>
+    <select name="palpite_5" id="palpite_5" required>
+        <option value="Cuiabá (Casa)">Cuiabá (Casa)</option>
+        <option value="Empate">Empate</option>
+        <option value="Atlético-GO (Visitante)">Atlético-GO (Visitante)</option>
+    </select>
+</div>
+
+<div class="game">
+    <label for="palpite_6">6. Grêmio vs Palmeiras:</label>
+    <select name="palpite_6" id="palpite_6" required>
+        <option value="Grêmio (Casa)">Grêmio (Casa)</option>
+        <option value="Empate">Empate</option>
+        <option value="Palmeiras (Visitante)">Palmeiras (Visitante)</option>
+    </select>
+</div>
+
+<div class="game">
+    <label for="palpite_7">7. Fluminense vs Juventude:</label>
+    <select name="palpite_7" id="palpite_7" required>
+        <option value="Fluminense (Casa)">Fluminense (Casa)</option>
+        <option value="Empate">Empate</option>
+        <option value="Juventude (Visitante)">Juventude (Visitante)</option>
+    </select>
+</div>
+
+<div class="game">
+    <label for="palpite_8">8. Cruzeiro vs Red Bull Bragantino:</label>
+    <select name="palpite_8" id="palpite_8" required>
+        <option value="Cruzeiro (Casa)">Cruzeiro (Casa)</option>
+        <option value="Empate">Empate</option>
+        <option value="Red Bull Bragantino (Visitante)">Red Bull Bragantino (Visitante)</option>
+    </select>
+</div>
+
+<div class="game">
+    <label for="palpite_9">9. Flamengo vs Athletico-PR:</label>
+    <select name="palpite_9" id="palpite_9" required>
+        <option value="Flamengo (Casa)">Flamengo (Casa)</option>
+        <option value="Empate">Empate</option>
+        <option value="Athletico-PR (Visitante)">Athletico-PR (Visitante)</option>
+    </select>
+</div>
+
+<div class="game">
+    <label for="palpite_10">10. Corinthians vs Santos:</label>
+    <select name="palpite_10" id="palpite_10" required>
+        <option value="Corinthians (Casa)">Corinthians (Casa)</option>
+        <option value="Empate">Empate</option>
+        <option value="Santos (Visitante)">Santos (Visitante)</option>
+    </select>
+</div>
+            </div>
+
+            <button type="button" onclick="mostrarPix()">Concluir Palpite</button>
+        </form>
+
+        <!-- Exibir QR Code e chave Pix -->
+        <div class="pix-info" id="pix-info">
+            <img src="images/qrcode-pix.png" alt="QR Code para pagamento" id="qr-code" style="max-width: 200px; margin-top: 10px;">
+            <p>Chave Pix: <strong>(19) 99824-9223</strong></p>
+            <p>Pagamento: R$10,00</p>
+            <p>💰🏆⚽ Obrigado por participar! 🏆⚽💰</p>
+            <button type="button" onclick="enviarWhatsApp()">Enviar para WhatsApp</button>
+            <button class="secondary-button" onclick="redirecionarParaPalpitePlacar()">Ir para a segunda página de palpites</button>
+        </div>
+    </section>
+
+    <script>
+        function mostrarPix() {
+            // Mostra o QR code e a chave Pix após a confirmação do palpite
+            document.getElementById('pix-info').style.display = 'block';
+        }
+
+        function enviarWhatsApp() {
+            // Captura os dados do formulário
+            const nomeCliente = document.getElementById('client-name').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const email = document.getElementById('email').value;
+            const palpite_1 = document.getElementById('palpite_1').value;
+            const palpite_2 = document.getElementById('palpite_2').value;
+            const palpite_3 = document.getElementById('palpite_1').value;
+            const palpite_4 = document.getElementById('palpite_2').value;
+            const palpite_5 = document.getElementById('palpite_1').value;
+            const palpite_6 = document.getElementById('palpite_2').value;
+            const palpite_7 = document.getElementById('palpite_1').value;
+            const palpite_8 = document.getElementById('palpite_2').value;
+            const palpite_9 = document.getElementById('palpite_1').value;
+            const palpite_10 = document.getElementById('palpite_2').value;
+
+            // Cria a mensagem para o WhatsApp
+const mensagem = `*Palpites do Jogo*\n\n` +
+    `Nome: ${nomeCliente}\n` +
+    `WhatsApp: ${whatsapp}\n` +
+    `Email: ${email}\n` +
+    `1. São Paulo vs Vasco: ${palpite_1}\n` +
+    `2. Fortaleza vs Atlético-MG: ${palpite_2}\n` +
+    `3. Bahia vs Botafogo: ${palpite_3}\n` +
+    `4. Internacional vs Corinthians: ${palpite_4}\n` +
+    `5. Cuiabá vs Atlético-GO: ${palpite_5}\n` +
+    `6. Grêmio vs Palmeiras: ${palpite_6}\n` +
+    `7. Fluminense vs Juventude: ${palpite_7}\n` +
+    `8. Cruzeiro vs Red Bull Bragantino: ${palpite_8}\n` +
+    `9. Flamengo vs Athletico-PR: ${palpite_9}\n` +
+    `10. Corinthians vs Santos: ${palpite_10}\n\n` +
+    `*Pagamento:* R$10,00\n*Chave Pix:* seuemail@exemplo.com`;
+            // Codifica a mensagem para o WhatsApp
+            const whatsappLink = `https://api.whatsapp.com/send?phone=27997294468&text=${encodeURIComponent(mensagem)}`;
+            window.open(whatsappLink, '_blank'); // Abre o WhatsApp em uma nova aba
+        }
+
+        function redirecionarParaPalpitePlacar() {
+            // Redireciona para o arquivo palpiteplacar.html
+            window.location.href = "palpiteplacar.html"; // Atualize o URL conforme necessário
+        }
+    </script>
+</body>
+</html>

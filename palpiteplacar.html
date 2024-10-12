@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PalpiteBet ⚽ Palpites de Placares!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>PalpiteBet ⚽💰</h1>
+        <p>Faça seus palpites de placares e concorra a R$800! 🎯</p>
+    </header>
+
+    <section class="placar-page">
+        <h2>Palpites de Placares 🏆⚽</h2>
+        <form id="placar-form" onsubmit="enviarPlacarPalpites(event)">
+            <div class="games-list">
+                <h3>Jogos da Rodada:</h3>
+                <div class="game">
+                    <label>1. São Paulo vs Vasco</label>
+                    <input type="number" name="placar_sao_paulo" id="placar_sao_paulo" placeholder="São Paulo" required>
+                    <span>x</span>
+                    <input type="number" name="placar_vasco" id="placar_vasco" placeholder="Vasco" required>
+                </div>
+                <div class="game">
+                    <label>2. Fortaleza vs Atlético-MG</label>
+                    <input type="number" name="placar_fortaleza" id="placar_fortaleza" placeholder="Fortaleza" required>
+                    <span>x</span>
+                    <input type="number" name="placar_atletico_mg" id="placar_atletico_mg" placeholder="Atlético-MG" required>
+                </div>
+                <div class="game">
+                    <label>3. Bahia vs Botafogo</label>
+                    <input type="number" name="placar_bahia" id="placar_bahia" placeholder="Bahia" required>
+                    <span>x</span>
+                    <input type="number" name="placar_botafogo" id="placar_botafogo" placeholder="Botafogo" required>
+                </div>
+                <div class="game">
+                    <label>4. Internacional vs Corinthians</label>
+                    <input type="number" name="placar_internacional" id="placar_internacional" placeholder="Internacional" required>
+                    <span>x</span>
+                    <input type="number" name="placar_corinthians" id="placar_corinthians" placeholder="Corinthians" required>
+                </div>
+                <div class="game">
+                    <label>5. Cuiabá vs Atlético-GO</label>
+                    <input type="number" name="placar_cuiaba" id="placar_cuiaba" placeholder="Cuiabá" required>
+                    <span>x</span>
+                    <input type="number" name="placar_atletico_go" id="placar_atletico_go" placeholder="Atlético-GO" required>
+                </div>
+                <div class="game">
+                    <label>6. Grêmio vs Palmeiras</label>
+                    <input type="number" name="placar_gremio" id="placar_gremio" placeholder="Grêmio" required>
+                    <span>x</span>
+                    <input type="number" name="placar_palmeiras" id="placar_palmeiras" placeholder="Palmeiras" required>
+                </div>
+                <div class="game">
+                    <label>7. Fluminense vs Juventude</label>
+                    <input type="number" name="placar_fluminense" id="placar_fluminense" placeholder="Fluminense" required>
+                    <span>x</span>
+                    <input type="number" name="placar_juventude" id="placar_juventude" placeholder="Juventude" required>
+                </div>
+                <div class="game">
+                    <label>8. Cruzeiro vs Red Bull Bragantino</label>
+                    <input type="number" name="placar_cruzeiro" id="placar_cruzeiro" placeholder="Cruzeiro" required>
+                    <span>x</span>
+                    <input type="number" name="placar_redbull" id="placar_redbull" placeholder="Red Bull Bragantino" required>
+                </div>
+                <div class="game">
+                    <label>9. Flamengo vs Athletico-PR</label>
+                    <input type="number" name="placar_flamengo" id="placar_flamengo" placeholder="Flamengo" required>
+                    <span>x</span>
+                    <input type="number" name="placar_athletico" id="placar_athletico" placeholder="Athletico-PR" required>
+                </div>
+                <div class="game">
+                    <label>10. Corinthians vs Santos</label>
+                    <input type="number" name="placar_corinthians_2" id="placar_corinthians_2" placeholder="Corinthians" required>
+                    <span>x</span>
+                    <input type="number" name="placar_santos" id="placar_santos" placeholder="Santos" required>
+                </div>
+            </div>
+
+            <div class="client-info">
+                <h3>Informações do Cliente:</h3>
+                <label for="client-name">Nome</label>
+                <input type="text" id="client-name" name="client_name" placeholder="Seu Nome" required>
+
+                <label for="client-phone">Telefone</label>
+                <input type="tel" id="client-phone" name="client_phone" placeholder="Seu Telefone" required>
+            </div>
+
+            <div class="pix-info">
+                <h3>Finalize seu Palpite:</h3>
+                <p>Valor do palpite: R$10,00</p>
+                <img src="images/qrcode-pix.png" alt="QR Code Pix">
+                <p>Chave Pix: (19) 99824-9223</p>
+                <p>💰 Obrigado por participar! 💰</p>
+            </div>
+
+            <button type="submit">Enviar Palpites de Placares</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>PalpiteBet - Todos os direitos reservados © 2024</p>
+    </footer>
+
+    <script>
+        function enviarPlacarPalpites(event) {
+            event.preventDefault();
+
+            // Capturando os palpites de placares
+            var nomeCliente = document.getElementById("client-name").value;
+            var telefoneCliente = document.getElementById("client-phone").value;
+
+            var placarSaoPaulo = document.getElementById("placar_sao_paulo").value;
+            var placarVasco = document.getElementById("placar_vasco").value;
+            var placarFortaleza = document.getElementById("placar_fortaleza").value;
+            var placarAtletico = document.getElementById("placar_atletico_mg").value; // Atlético-MG
+            var placarBahia = document.getElementById("placar_bahia").value;
+            var placarBotafogo = document.getElementById("placar_botafogo").value;
+            var placarInternacional = document.getElementById("placar_internacional").value;
+            var placarCorinthians = document.getElementById("placar_corinthians").value;
+            var placarCuiaba = document.getElementById("placar_cuiaba").value;
+            var placarAtleticoGO = document.getElementById("placar_atletico_go").value; // Atlético-GO
+            var placarGremio = document.getElementById("placar_gremio").value;
+            var placarPalmeiras = document.getElementById("placar_palmeiras").value;
+            var placarFluminense = document.getElementById("placar_fluminense").value;
+            var placarJuventude = document.getElementById("placar_juventude").value; // Juventude
+            var placarCruzeiro = document.getElementById("placar_cruzeiro").value;
+            var placarRedBull = document.getElementById("placar_redbull").value;
+            var placarFlamengo = document.getElementById("placar_flamengo").value;
+            var placarAthletico = document.getElementById("placar_athletico").value; // Athletico-PR
+            var placarSantos = document.getElementById("placar_santos").value;
+
+            // Montando a mensagem para o WhatsApp
+            var mensagemPlacar = "Nome: " + nomeCliente + "\n" +
+                                 "Telefone: " + telefoneCliente + "\n\n" +
+                                 "Palpites de Placares:\n" +
+                                 "1. São Paulo " + placarSaoPaulo + " x " + placarVasco + "\n" +
+                                 "2. Fortaleza " + placarFortaleza + " x " + placarAtletico + "\n" +
+                                 "3. Bahia " + placarBahia + " x " + placarBotafogo + "\n" +
+                                 "4. Internacional " + placarInternacional + " x " + placarCorinthians + "\n" +
+                                 "5. Cuiabá " + placarCuiaba + " x " + placarAtleticoGO + "\n" +
+                                 "6. Grêmio " + placarGremio + " x " + placarPalmeiras + "\n" +
+                                 "7. Fluminense " + placarFluminense + " x " + placarJuventude + "\n" +
+                                 "8. Cruzeiro " + placarCruzeiro + " x " + placarRedBull + "\n" +
+                                 "9. Flamengo " + placarFlamengo + " x " + placarAthletico + "\n" +
+                                 "10. Corinthians " + placarCorinthians + " x " + placarSantos;
+
+            // Codificando a mensagem para URL
+            var mensagemCodificada = encodeURIComponent(mensagemPlacar);
+            var numeroWhatsapp = "55" + telefoneCliente.replace(/\D/g, ''); // Formatação para WhatsApp
+            
+            // Redirecionando para o WhatsApp
+            var linkWhatsApp = `https://api.whatsapp.com/send?phone=${5527997294468}&text=${mensagemCodificada}`;
+            window.open(linkWhatsApp, '_blank');
+        }
+    </script>
+</body>
+</html>
